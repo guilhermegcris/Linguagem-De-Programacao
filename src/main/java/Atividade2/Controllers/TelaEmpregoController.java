@@ -2,7 +2,7 @@ package Atividade2.Controllers;
 
 import Atividade2.Executavel;
 import Atividade2.Navegador;
-import Atividade2.DAO.EmpregoDAO;
+import Atividade2.Database.EmpregoDAO;
 import Atividade2.Models.Emprego;
 
 import javafx.fxml.FXML;

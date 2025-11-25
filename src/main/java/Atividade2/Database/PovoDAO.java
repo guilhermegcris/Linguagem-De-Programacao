@@ -1,7 +1,6 @@
 package Atividade2.Database;
 
 import Atividade2.Models.Povo;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
