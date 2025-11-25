@@ -3,7 +3,7 @@ package Atividade2.Controllers;
 import Atividade2.Executavel;
 import Atividade2.Navegador;
 
-import Atividade2.DAO.DinheiroDAO;
+import Atividade2.Database.DinheiroDAO;
 import Atividade2.Models.Dinheiro;
 
 import javafx.fxml.FXML;
@@ -37,6 +37,7 @@ public class TelaDinheiroController {
         String moeda = txtMoeda.getText().trim();
 
         double salario;
+
         try {
             salario = Double.parseDouble(salarioTxt);
             if (salario < 0) throw new NumberFormatException();
@@ -55,9 +56,9 @@ public class TelaDinheiroController {
             return;
         }
 
-        Dinheiro d = new Dinheiro(salario, poder, moeda);
+        Dinheiro dinheiro = new Dinheiro(salario, poder, moeda);
 
-        if (DinheiroDAO.salvar(d)) {
+        if (DinheiroDAO.salvar(dinheiro)) {
             mensagemLabel.setStyle("-fx-text-fill: green;");
             mensagemLabel.setText("Dados salvos com sucesso!");
         } else {

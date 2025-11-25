@@ -1,5 +1,5 @@
 
-package ExerciciosParte1;
+package Atividade1;
 
 import javax.swing.*;
 import java.awt.*;
