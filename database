@@ -1,0 +1,30 @@
+DROP DATABASE IF EXISTS ativ2;
+CREATE DATABASE ativ2;
+
+USE ativ2;
+
+DROP USER IF EXISTS 'ativ2'@'localhost';
+CREATE USER 'ativ2'@'localhost' IDENTIFIED BY 'pass123';
+
+GRANT SELECT, INSERT, DELETE, UPDATE ON ativ2.* TO 'ativ2'@'localhost';
+
+CREATE TABLE povo (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    origem VARCHAR(100),
+    quantidade INT
+);
+
+CREATE TABLE emprego (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    empresa VARCHAR(100),
+    cargo VARCHAR(100),
+    salario DOUBLE
+);
+
+CREATE TABLE dinheiro (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    salario DOUBLE,
+    poder_aquisitivo VARCHAR(100),
+    moeda VARCHAR(50)
+);
